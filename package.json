@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/vuraldesign/who.is.it/issues"
   },
-  "homepage": "https://github.com/vuraldesign/who.is.it#readme"
+  "homepage": "https://github.com/vuraldesign/who.is.it#readme",
+  "dependencies": {
+    "mongoose": "^5.4.3"
+  }
 }
