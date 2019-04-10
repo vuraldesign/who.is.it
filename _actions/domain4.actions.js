@@ -1,6 +1,6 @@
 var domain4 = require('../_models/domain4.models');
+var domain4fail = require('../_models/domain4fail.models');
 var shell = require('../_helpers/shell.commands');
-var domain4 = require('../_models/domain4.models');
 
 
 module.exports.run_turkish_four_cvcv = async function () {
@@ -17,10 +17,11 @@ module.exports.run_turkish_four_cvcv = async function () {
                 for (let l = 0; l < four_for.length; l++) {
                     var word = sessiz[i] + "" + sesli[j] + "" + sessiz[k] + "" + sesli[l] + "" + sessiz[m] + ".com";
                     await shell.run_dig_command(word, completed).then(resp => {
-                        if(resp != false){
+                        if (resp != false) {
                             domain4.add_new_domain4(resp.count, resp.domain);
                         }
                     }).catch((domain) => {
+                        domain4fail.add_new_domain4fail(completed, domain);
                         //ADD FAIL domain with count
                     });
                     completed++;
@@ -28,5 +29,4 @@ module.exports.run_turkish_four_cvcv = async function () {
             }
         }
     }
-
 }
