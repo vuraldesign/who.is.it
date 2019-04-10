@@ -1,4 +1,4 @@
-var Domain5Fail = require('../_structures/domain45ail.structures');
+var Domain5Fail = require('../_structures/domain5fail.structures');
 
 exports.get_domain5fail_list = function () {
     return new Promise(function (resolve, reject) {
@@ -12,7 +12,7 @@ exports.get_domain5fail_list = function () {
         });
     });
 }
-exports.add_new_domain4fail = function (count, domain) {
+exports.add_new_domain5fail = function (count, domain) {
     return new Promise(function (resolve, reject) {
         let domain5fail = new Domain5Fail({ count, domain });
         domain5fail.save(function (err) {
