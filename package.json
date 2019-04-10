@@ -1,0 +1,19 @@
+{
+  "name": "who.is.it",
+  "version": "1.0.0",
+  "description": "Who Is It?",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vuraldesign/who.is.it.git"
+  },
+  "author": "Hakan VURAL",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vuraldesign/who.is.it/issues"
+  },
+  "homepage": "https://github.com/vuraldesign/who.is.it#readme"
+}
