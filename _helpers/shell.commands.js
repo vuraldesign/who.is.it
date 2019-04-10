@@ -23,7 +23,7 @@ module.exports.run_dig_command = async function(word, count) {
         });
     });
 }
-module.exports.run_whois_command = function(word, count) {
+function run_whois_command(word, count) {
     return new Promise(function (resolve, reject) {
         exec('whois ' + word + ' | grep -A1 \"Domain Name\\|No match for domain\"', (err, stdout, stderr) => {
             if (err) {
@@ -38,7 +38,6 @@ module.exports.run_whois_command = function(word, count) {
                     } else {
                         return resolve(false);
                     }
-                    return resolve("OK");
                 } else {
                     return reject(word);
                 }
