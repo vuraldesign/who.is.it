@@ -24,6 +24,9 @@ module.exports.run_turkish_four_cvcv = async function () {
                         domain4fail.add_new_domain4fail(completed, domain);
                     });
                     completed++;
+                    if(completed == first_for.length * second_for.length * third_for.length * fourth_for.length){
+                        console.log("Detection completed")
+                    }
                 }
             }
         }
@@ -51,6 +54,9 @@ module.exports.run_turkish_four_vcvc = async function () {
                         domain4fail.add_new_domain4fail(completed, domain);
                     });
                     completed++;
+                    if(completed == first_for.length * second_for.length * third_for.length * fourth_for.length){
+                        console.log("Detection completed")
+                    }
                 }
             }
         }
@@ -78,6 +84,9 @@ module.exports.run_turkish_four_cvvc = async function () {
                         domain4fail.add_new_domain4fail(completed, domain);
                     });
                     completed++;
+                    if(completed == first_for.length * second_for.length * third_for.length * fourth_for.length){
+                        console.log("Detection completed")
+                    }
                 }
             }
         }
@@ -104,6 +113,9 @@ module.exports.run_turkish_four_vccv = async function () {
                         domain4fail.add_new_domain4fail(completed, domain);
                     });
                     completed++;
+                    if(completed == first_for.length * second_for.length * third_for.length * fourth_for.length){
+                        console.log("Detection completed")
+                    }
                 }
             }
         }
