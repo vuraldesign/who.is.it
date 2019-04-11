@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/vuraldesign/who.is.it#readme",
   "dependencies": {
-    "mongoose": "^5.4.3"
+    "mongoose": "^5.4.3",
+    "tunnel-ssh": "^4.1.4"
   }
 }
