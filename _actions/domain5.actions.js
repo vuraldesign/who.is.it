@@ -26,6 +26,9 @@ module.exports.run_turkish_five_cvcvc = async function () {
                             domain5fail.add_new_domain5fail(completed, domain);
                         });
                         completed++;
+                        if(completed == first_for.length * second_for.length * third_for.length * fourth_for.length * fifth_for.length){
+                            console.log("Detection completed")
+                        }
                     }
                 }
             }
@@ -56,6 +59,9 @@ module.exports.run_turkish_five_vcvcv = async function () {
                             domain5fail.add_new_domain5fail(completed, domain);
                         });
                         completed++;
+                        if(completed == first_for.length * second_for.length * third_for.length * fourth_for.length * fifth_for.length){
+                            console.log("Detection completed")
+                        }
                     }
                 }
             }
@@ -86,6 +92,9 @@ module.exports.run_turkish_five_cvvcv = async function () {
                             domain5fail.add_new_domain5fail(completed, domain);
                         });
                         completed++;
+                        if(completed == first_for.length * second_for.length * third_for.length * fourth_for.length * fifth_for.length){
+                            console.log("Detection completed")
+                        }
                     }
                 }
             }
@@ -115,6 +124,9 @@ module.exports.run_turkish_five_vccvc = async function () {
                             domain5fail.add_new_domain5fail(completed, domain);
                         });
                         completed++;
+                        if(completed == first_for.length * second_for.length * third_for.length * fourth_for.length * fifth_for.length){
+                            console.log("Detection completed")
+                        }
                     }
                 }
             }
