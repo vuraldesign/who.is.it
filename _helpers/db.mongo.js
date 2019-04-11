@@ -9,22 +9,34 @@ const mongo_options = {
     bufferMaxEntries: 0,
     useNewUrlParser: true
 };
-module.exports.connect = function () {
+module.exports.connect = function (local) {
     return new Promise(function (resolve, reject) {
-        var server = tunnel(config, function (error, server) {
-            if(error){
-                return reject("SSH connection error:" + error);
-            }
+        if(local == true){
             mongoose.connect(url,mongo_options);
-        
-            var db = mongoose.connection;
-            db.on('error', function() {
-                return reject("Database connection error");
+            
+                var db = mongoose.connection;
+                db.on('error', function() {
+                    return reject("Database connection error");
+                });
+                db.once('open', function() {
+                    return resolve("OK");
+                });
+        } else {
+            var server = tunnel(config, function (error, server) {
+                if(error){
+                    return reject("SSH connection error:" + error);
+                }
+                mongoose.connect(url,mongo_options);
+            
+                var db = mongoose.connection;
+                db.on('error', function() {
+                    return reject("Database connection error");
+                });
+                db.once('open', function() {
+                    return resolve("OK");
+                });
+            
             });
-            db.once('open', function() {
-                return resolve("OK");
-            });
-        
-        });
+        }
     })
 }
