@@ -3,15 +3,15 @@ var domain4 = require('./_actions/domain4.actions');
 var domain5 = require('./_actions/domain5.actions');
 
 async function search_start(){
-    db.connect().then(() => {
-        //domain4.run_turkish_four_cvcv();
-        //domain4.run_turkish_four_cvvc();
-        //domain4.run_turkish_four_vccv();
-        //domain4.run_turkish_four_vcvc();
+    db.connect(true).then(() => { //Local Mongo connect if u dont remote set false
+        //domain4.run_turkish_four_cvcv();TO DO
+        //domain4.run_turkish_four_cvvc();TO DO
+        //domain4.run_turkish_four_vccv();TO DO
+        //domain4.run_turkish_four_vcvc();TO DO
 
-        //domain5.run_turkish_five_cvcvc();
-        //domain5.run_turkish_five_cvvcv();
-        //domain5.run_turkish_five_vccvc();
+        //domain5.run_turkish_five_cvcvc();TO DO
+        //domain5.run_turkish_five_cvvcv();TO DO
+        //domain5.run_turkish_five_vccvc();TO DO
         domain5.run_turkish_five_vcvcv();
     }).catch((err) => {
         console.log("Project not start.");
