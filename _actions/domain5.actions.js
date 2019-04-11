@@ -5,9 +5,9 @@ var shell = require('../_helpers/shell.commands');
 
 module.exports.run_turkish_five_cvcvc = async function () {
     let first_for = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "r", "s", "t", "v", "y", "z"];
-    let second_for = ["a", "e", "o", "u"];
+    let second_for = ["a", "e", "o", "u", "i"];
     let third_for = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "r", "s", "t", "v", "y", "z"];
-    let fourth_for = ["a", "e", "o", "u"];
+    let fourth_for = ["a", "e", "o", "u", "i"];
     let fifth_for = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "r", "s", "t", "v", "y", "z"];
     let completed = 0;
     console.log("Total Variations:" + first_for.length * second_for.length * third_for.length * fourth_for.length * fifth_for.length);
@@ -26,7 +26,7 @@ module.exports.run_turkish_five_cvcvc = async function () {
                             domain5fail.add_new_domain5fail(completed, domain);
                         });
                         completed++;
-                        if(completed == first_for.length * second_for.length * third_for.length * fourth_for.length * fifth_for.length){
+                        if (completed == first_for.length * second_for.length * third_for.length * fourth_for.length * fifth_for.length) {
                             console.log("Detection completed")
                         }
                     }
@@ -37,11 +37,11 @@ module.exports.run_turkish_five_cvcvc = async function () {
 }
 
 module.exports.run_turkish_five_vcvcv = async function () {
-    let first_for = ["a", "e", "o", "u"];
+    let first_for = ["a", "e", "o", "u", "i"];
     let second_for = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "r", "s", "t", "v", "y", "z"];
-    let third_for = ["a", "e", "o", "u"];
+    let third_for = ["a", "e", "o", "u", "i"];
     let fourth_for = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "r", "s", "t", "v", "y", "z"];
-    let fifth_for = ["a", "e", "o", "u"];
+    let fifth_for = ["a", "e", "o", "u", "i"];
     let completed = 0;
     console.log("Total Variations:" + first_for.length * second_for.length * third_for.length * fourth_for.length * fifth_for.length);
 
@@ -59,7 +59,7 @@ module.exports.run_turkish_five_vcvcv = async function () {
                             domain5fail.add_new_domain5fail(completed, domain);
                         });
                         completed++;
-                        if(completed == first_for.length * second_for.length * third_for.length * fourth_for.length * fifth_for.length){
+                        if (completed == first_for.length * second_for.length * third_for.length * fourth_for.length * fifth_for.length) {
                             console.log("Detection completed")
                         }
                     }
@@ -71,10 +71,10 @@ module.exports.run_turkish_five_vcvcv = async function () {
 
 module.exports.run_turkish_five_cvvcv = async function () {
     let first_for = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "r", "s", "t", "v", "y", "z"];
-    let second_for = ["a", "e", "o", "u"];
-    let third_for = ["a", "e", "o", "u"];
+    let second_for = ["a", "e", "o", "u", "i"];
+    let third_for = ["a", "e", "o", "u", "i"];
     let fourth_for = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "r", "s", "t", "v", "y", "z"];
-    let fifth_for = ["a", "e", "o", "u"];
+    let fifth_for = ["a", "e", "o", "u", "i"];
     let completed = 0;
     console.log("Total Variations:" + first_for.length * second_for.length * third_for.length * fourth_for.length * fifth_for.length);
 
@@ -92,7 +92,7 @@ module.exports.run_turkish_five_cvvcv = async function () {
                             domain5fail.add_new_domain5fail(completed, domain);
                         });
                         completed++;
-                        if(completed == first_for.length * second_for.length * third_for.length * fourth_for.length * fifth_for.length){
+                        if (completed == first_for.length * second_for.length * third_for.length * fourth_for.length * fifth_for.length) {
                             console.log("Detection completed")
                         }
                     }
@@ -102,10 +102,10 @@ module.exports.run_turkish_five_cvvcv = async function () {
     }
 }
 module.exports.run_turkish_five_vccvc = async function () {
-    let first_for = ["a", "e", "o", "u"];
+    let first_for = ["a", "e", "o", "u", "i"];
     let second_for = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "r", "s", "t", "v", "y", "z"];
     let third_for = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "r", "s", "t", "v", "y", "z"];
-    let fourth_for = ["a", "e", "o", "u"];
+    let fourth_for = ["a", "e", "o", "u", "i"];
     let fifth_for = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "r", "s", "t", "v", "y", "z"];
     let completed = 0;
     console.log("Total Variations:" + first_for.length * second_for.length * third_for.length * fourth_for.length * fifth_for.length);
@@ -124,7 +124,7 @@ module.exports.run_turkish_five_vccvc = async function () {
                             domain5fail.add_new_domain5fail(completed, domain);
                         });
                         completed++;
-                        if(completed == first_for.length * second_for.length * third_for.length * fourth_for.length * fifth_for.length){
+                        if (completed == first_for.length * second_for.length * third_for.length * fourth_for.length * fifth_for.length) {
                             console.log("Detection completed")
                         }
                     }
