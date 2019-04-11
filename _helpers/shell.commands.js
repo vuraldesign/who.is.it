@@ -25,12 +25,12 @@ module.exports.run_dig_command = async function(word, count) {
 }
 function run_whois_command(word, count) {
     return new Promise(function (resolve, reject) {
-        exec('whois ' + word + ' | grep -A1 \"Domain Name\\|No match for domain\"', (err, stdout, stderr) => {
+        exec('whois ' + word + ' | grep -A1 \"Domain Name\\|No match for \"', (err, stdout, stderr) => {
             if (err) {
                 return reject(word);
             } else {
                 if (!stderr) {
-                    if (stdout.indexOf("No match for domain") > -1) {
+                    if (stdout.indexOf("No match for") > -1) {
                         return resolve({
                             "count": count,
                             "domain": word
