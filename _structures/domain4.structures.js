@@ -1,9 +1,0 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
-
-let Domain4Schema = new Schema({
-    domain: {type: String, required: false, max:100},
-    count: {type:Number, required: false}
-});
-
-module.exports = mongoose.model('Domain4', Domain4Schema);
